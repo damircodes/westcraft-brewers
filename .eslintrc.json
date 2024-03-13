@@ -1,3 +1,40 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.spec.js",
+          "**/*.test.ts",
+          "**/*.spec.ts",
+          "tests/**/*",
+          "test/**/*"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      { "functions": false, "classes": true }
+    ]
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "!**/*.ts",
+    "!**/*.tsx",
+    "!**/*.js",
+    "!**/*.jsx"
+  ]
 }

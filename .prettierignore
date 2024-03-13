@@ -1,0 +1,8 @@
+node_modules/
+.next/
+**/*.svg
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
+**/*.md
